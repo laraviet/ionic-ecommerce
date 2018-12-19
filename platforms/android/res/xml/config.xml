@@ -54,9 +54,12 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="OneSignalPush">
+        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
+    </feature>
     <name>ACIF</name>
-    <description>Ionic - Shop</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>ACIF Ecommerce App</description>
+    <author email="thanhcttsp@gmail.com" href="http://laraviet.com/">Laraviet</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -97,7 +100,4 @@
     <preference name="loadUrlTimeoutValue" value="700000" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <feature name="OneSignalPush">
-        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
-    </feature>
 </widget>

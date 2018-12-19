@@ -96,6 +96,6 @@
     </feature>
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <engine name="android" spec="6.3.0" />
     <plugin name="onesignal-cordova-plugin" spec="2.4.6" />
+    <engine name="android" spec="6.3.0" />
 </widget>

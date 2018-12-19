@@ -147,7 +147,9 @@ export class MyApp {
           if (this.config.showIntroPage == 0) value = 'firstTime';
 
           if (value == 'firstTime') {
-            if (this.config.homePage == 1) { this.rootPage = HomePage; }
+            // @TODO: replace default code
+            // if (this.config.homePage == 1) { this.rootPage = HomePage; }
+            if (this.config.homePage == 1) { this.rootPage = AboutUsPage; }
             if (this.config.homePage == 2) { this.rootPage = Home2Page; }
             if (this.config.homePage == 3) { this.rootPage = Home3Page; }
             if (this.config.homePage == 4) { this.rootPage = Home4Page; }
