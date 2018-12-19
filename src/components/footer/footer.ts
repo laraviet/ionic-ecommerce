@@ -11,6 +11,7 @@ import { NewsPage } from '../../pages/news/news';
 import { SharedDataProvider } from '../../providers/shared-data/shared-data';
 ///import { share } from 'rxjs/operator/share';
 import { AboutUsPage } from '../../pages/about-us/about-us';
+import { ContactUsPage } from '../../pages/contact-us/contact-us';
 import { SettingsPage } from '../../pages/settings/settings';
 import { ProductsPage } from '../../pages/products/products';
 import { ConfigProvider } from '../../providers/config/config';
@@ -31,7 +32,7 @@ import { Categories6Page } from '../../pages/categories6/categories6';
   templateUrl: 'footer.html'
 })
 export class FooterComponent {
-  segments: any = 'HomePage';
+  segments: any = 'AboutUsPage';
   constructor(
     public navCtrl: NavController,
     public shared: SharedDataProvider,
@@ -48,6 +49,7 @@ export class FooterComponent {
     else if (page == "ProductsPage") { this.navCtrl.push(ProductsPage); }
     else if (page == "NewsPage") { this.navCtrl.setRoot(NewsPage); }
     else if (page == "SettingsPage") { this.navCtrl.setRoot(SettingsPage); }
+    else if (page == "ContactUsPage") { this.navCtrl.setRoot(ContactUsPage); }
   }
   openHomePage() {
     if (this.config.homePage == 1) { this.navCtrl.setRoot(AboutUsPage); }

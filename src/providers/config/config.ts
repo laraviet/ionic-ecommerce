@@ -23,13 +23,13 @@ export class ConfigProvider {
   public consumerKey: string = "b5abfd1f15446271985e2223e5";
   public consumerSecret: string = "f7ba379a1544627198cfd7e5c9";
 
-  public showIntroPage = 1; //  0 to hide and 1 to show intro page
+  public showIntroPage = 0; //  0 to hide and 1 to show intro page
   public appInProduction = true;//  0 to hide and 1 to show intro page
   public defaultIcons = false; //  0 to hide and 1 to show intro page
 
   public url: string = this.yourSiteUrl + '/app/';
   public imgUrl: string = this.yourSiteUrl + "/";
-  public langId: string = localStorage.langId;
+  public langId: string = '1';
   public loader = 'dots';
   public newProductDuration = 100;
   public cartButton = 1;//1 = show and 0 = hide

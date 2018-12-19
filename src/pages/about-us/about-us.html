@@ -10,14 +10,14 @@
       </ion-title>
   
       <ion-buttons end>
-        <button ion-button icon-only (click)="openSearch()">
+        <!-- <button ion-button icon-only (click)="openSearch()">
           <ion-icon name="search"></ion-icon>
-        </button>
-        <button ion-button icon-only class="cart-button" (click)="openCart()">
+        </button> -->
+        <!-- <button ion-button icon-only class="cart-button" (click)="openCart()">
           <ion-icon name="cart">
             <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>
           </ion-icon>
-        </button>
+        </button> -->
       </ion-buttons>
     </ion-navbar>
   </ion-header>
@@ -30,7 +30,7 @@
       {{"Official Website"|translate}}
       <ion-icon showWhen="android" name="arrow-forward" item-end></ion-icon>
     </button> -->
-    <button ion-item (click)="showModal('privacyPolicy')">
+    <!-- <button ion-item (click)="showModal('privacyPolicy')">
         {{'Privacy Policy'|translate}}
         <ion-icon showWhen="android" name="arrow-forward" item-end></ion-icon>
         
@@ -39,7 +39,7 @@
         {{'Refund Policy'|translate}}
         <ion-icon showWhen="android" name="arrow-forward" item-end></ion-icon>
         
-    </button>
+    </button> -->
     <button ion-item (click)="showModal('termServices')">
         {{'Term and Services'|translate}}
         <ion-icon showWhen="android" name="arrow-forward" item-end></ion-icon>
@@ -47,6 +47,6 @@
     </button>
   </ion-list>
 </ion-content>
-<!-- <ion-footer *ngIf="config.footerShowHide==1">
+<ion-footer *ngIf="config.footerShowHide==1">
   <footer ></footer>
-</ion-footer> -->
+</ion-footer>
