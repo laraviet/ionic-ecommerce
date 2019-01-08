@@ -5945,9 +5945,12 @@ var SharedDataProvider = (function () {
                 }
             }
             else if (this.config.notificationType == "onesignal") {
+                console.log(this.config.onesignalAppId);
+                console.log(this.config.onesignalSenderId);
                 this.oneSignal.startInit(this.config.onesignalAppId, this.config.onesignalSenderId);
                 this.oneSignal.endInit();
                 this.oneSignal.getIds().then(function (data) {
+                    console.log(data);
                     _this.registerDevice(data.userId);
                 });
             }
@@ -6027,10 +6030,21 @@ var SharedDataProvider = (function () {
     };
     SharedDataProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* ConfigProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* ConfigProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__loading_loading__["a" /* LoadingProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__loading_loading__["a" /* LoadingProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* Events */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__ionic_native_push__["a" /* Push */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ionic_native_push__["a" /* Push */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["w" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["w" /* Platform */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_device__["a" /* Device */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_device__["a" /* Device */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_fcm__["a" /* FCM */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_fcm__["a" /* FCM */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_native_app_version__["a" /* AppVersion */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_native_app_version__["a" /* AppVersion */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_native_onesignal__["a" /* OneSignal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_native_onesignal__["a" /* OneSignal */]) === "function" && _l || Object, typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__["c" /* TranslateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__["c" /* TranslateService */]) === "function" && _m || Object, typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["z" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["z" /* ToastController */]) === "function" && _o || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__config_config__["a" /* ConfigProvider */],
+            __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_4__loading_loading__["a" /* LoadingProvider */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["i" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_push__["a" /* Push */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["w" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_6__ionic_native_device__["a" /* Device */],
+            __WEBPACK_IMPORTED_MODULE_7__ionic_native_fcm__["a" /* FCM */],
+            __WEBPACK_IMPORTED_MODULE_9__ionic_native_app_version__["a" /* AppVersion */],
+            __WEBPACK_IMPORTED_MODULE_8__ionic_native_onesignal__["a" /* OneSignal */],
+            __WEBPACK_IMPORTED_MODULE_11__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["z" /* ToastController */]])
     ], SharedDataProvider);
     return SharedDataProvider;
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
 }());
 
 //  return new Promise(resolve => {
