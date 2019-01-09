@@ -12,18 +12,27 @@
       <ion-icon name="cash"></ion-icon>
       <div class="footer-title">{{ 'Shop' | translate }}</div>
     </ion-segment-button> -->
+    
+    <ion-segment-button value="FurniturePage" (click)="openPage('FurniturePage')">
+      <ion-icon name="construct"></ion-icon>
+      <div class="footer-title">{{ 'Furniture' | translate }}</div>
+    </ion-segment-button>
+    <ion-segment-button value="AcifPage" (click)="openPage('AcifPage')">
+      <ion-icon name="aperture"></ion-icon>
+      <div class="footer-title">{{ 'Acif' | translate }}</div>
+    </ion-segment-button>
     <ion-segment-button value="NewsPage" (click)="openPage('NewsPage')">
       <ion-icon name="paper"></ion-icon>
       <div class="footer-title">{{ 'News' | translate }}</div>
     </ion-segment-button>
     <ion-segment-button value="ContactUsPage" (click)="openPage('ContactUsPage')">
-      <ion-icon name="paper"></ion-icon>
+      <ion-icon name="call"></ion-icon>
       <div class="footer-title">{{ 'Contact Us' | translate }}</div>
     </ion-segment-button>
-    <ion-segment-button value="SettingsPage" (click)="openPage('SettingsPage')">
+    <!-- <ion-segment-button value="SettingsPage" (click)="openPage('SettingsPage')">
       <ion-icon name="settings"></ion-icon>
       <div class="footer-title">{{ 'Menu' | translate }}</div>
-    </ion-segment-button>
+    </ion-segment-button> -->
   </ion-segment>
 
   <ion-segment [(ngModel)]="segments" *ngIf="!config.defaultIcons">
@@ -39,17 +48,26 @@
       <ion-icon><img src="assets/left-menu-icon/shop.png"></ion-icon>
       <div class="footer-title">{{ 'Shop' | translate }}</div>
     </ion-segment-button> -->
+    
+    <ion-segment-button value="FurniturePage" (click)="openPage('FurniturePage')">
+      <ion-icon name="construct"></ion-icon>
+      <div class="footer-title">{{ 'Furniture' | translate }}</div>
+    </ion-segment-button>
+    <ion-segment-button value="AcifPage" (click)="openPage('AcifPage')">
+      <ion-icon name="aperture"></ion-icon>
+      <div class="footer-title">{{ 'Acif' | translate }}</div>
+    </ion-segment-button>
     <ion-segment-button value="NewsPage" (click)="openPage('NewsPage')">
       <ion-icon><img src="assets/left-menu-icon/news.png"></ion-icon>
       <div class="footer-title">{{ 'News' | translate }}</div>
     </ion-segment-button>
     <ion-segment-button value="ContactUsPage" (click)="openPage('ContactUsPage')">
-      <ion-icon><img src="assets/left-menu-icon/phone.png"></ion-icon>
+      <ion-icon name="call"></ion-icon>
       <div class="footer-title">{{ 'Contact Us' | translate }}</div>
     </ion-segment-button>
-    <ion-segment-button value="SettingsPage" (click)="openPage('SettingsPage')">
+    <!-- <ion-segment-button value="SettingsPage" (click)="openPage('SettingsPage')">
       <ion-icon><img src="assets/left-menu-icon/setting.png"></ion-icon>
       <div class="footer-title">{{ 'Menu' | translate }}</div>
-    </ion-segment-button>
+    </ion-segment-button> -->
   </ion-segment>
 </ion-toolbar>

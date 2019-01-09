@@ -52131,6 +52131,10 @@ page-about-us .page-about-us .item {
   background-color: #ffffff;
 }
 
+page-acif .page-acif .item {
+  background-color: #ffffff;
+}
+
 page-billing-address .list .item {
   padding-left: 0;
 }
@@ -53216,6 +53220,10 @@ page-news-list .page-news-list .list .item .post-excerpt p {
 
 page-news-list .page-news-list .list .item .post-excerpt strong {
   font-weight: normal;
+}
+
+page-noi-that .page-noi-that .item {
+  background-color: #ffffff;
 }
 
 page-order .page-order ion-card ion-card-header {

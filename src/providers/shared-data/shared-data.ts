@@ -31,6 +31,8 @@ export class SharedDataProvider {
   public termServices = "";
   public refundPolicy = "";
   public aboutUs = "";
+  public noiThat = "";
+  public acif = "";
   public cartquantity;
   public wishList = new Array();
   public tempdata: { [k: string]: any } = {};
@@ -154,6 +156,8 @@ export class SharedDataProvider {
           if (value.slug == 'term-services') this.termServices = value.description;
           if (value.slug == 'refund-policy') this.refundPolicy = value.description;
           if (value.slug == 'about-us') this.aboutUs = value.description;
+          if (value.slug == 'noi-that') this.noiThat = value.description;
+          if (value.slug == 'acif') this.acif = value.description;
         }
       }
     });

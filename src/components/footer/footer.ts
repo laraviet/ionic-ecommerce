@@ -11,6 +11,8 @@ import { NewsPage } from '../../pages/news/news';
 import { SharedDataProvider } from '../../providers/shared-data/shared-data';
 ///import { share } from 'rxjs/operator/share';
 import { AboutUsPage } from '../../pages/about-us/about-us';
+import { FurniturePage } from '../../pages/noi-that/noi-that';
+import { AcifPage } from '../../pages/acif/acif';
 import { ContactUsPage } from '../../pages/contact-us/contact-us';
 import { SettingsPage } from '../../pages/settings/settings';
 import { ProductsPage } from '../../pages/products/products';
@@ -50,6 +52,8 @@ export class FooterComponent {
     else if (page == "NewsPage") { this.navCtrl.setRoot(NewsPage); }
     else if (page == "SettingsPage") { this.navCtrl.setRoot(SettingsPage); }
     else if (page == "ContactUsPage") { this.navCtrl.setRoot(ContactUsPage); }
+    else if (page == "FurniturePage") { this.navCtrl.setRoot(FurniturePage); }
+    else if (page == "AcifPage") { this.navCtrl.setRoot(AcifPage); }
   }
   openHomePage() {
     if (this.config.homePage == 1) { this.navCtrl.setRoot(AboutUsPage); }

@@ -33,6 +33,8 @@ import { LoginPage } from '../pages/login/login';
 
 import { IntroPage } from '../pages/intro/intro';
 import { AboutUsPage } from '../pages/about-us/about-us';
+import { FurniturePage } from '../pages/noi-that/noi-that';
+import { AcifPage } from '../pages/acif/acif';
 import { ContactUsPage } from '../pages/contact-us/contact-us';
 import { LoadingProvider } from '../providers/loading/loading';
 import { SharedDataProvider } from '../providers/shared-data/shared-data';
@@ -140,6 +142,8 @@ import { Timer } from '../components/countdown-timer/timer';
     LanguagePage,
     ContactUsPage,
     AboutUsPage,
+    FurniturePage,
+    AcifPage,
     IntroPage,
     LoginPage,
     SignUpPage,
@@ -223,6 +227,8 @@ import { Timer } from '../components/countdown-timer/timer';
     ProductsPage,
     ContactUsPage,
     AboutUsPage,
+    FurniturePage,
+    AcifPage,
     IntroPage,
     WishListPage,
     ShippingAddressPage,
