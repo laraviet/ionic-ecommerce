@@ -8795,7 +8795,8 @@ var ContactUsPage = (function () {
         this.contact = {
             name: '',
             email: '',
-            message: ''
+            message: '',
+            phone: ''
         };
     }
     ContactUsPage.prototype.ionViewDidLoad = function () {
@@ -8808,10 +8809,12 @@ var ContactUsPage = (function () {
         dat = this.contact;
         this.httpClient.post(this.config.url + 'contactus', dat).subscribe(function (data) {
             _this.loading.hide();
+            console.log(data);
             if (data.success == 1) {
                 _this.contact.name = '';
                 _this.contact.email = '';
                 _this.contact.message = '';
+                _this.contact.phone = '';
                 _this.shared.toast(data.message);
             }
         }, function (response) {
@@ -8850,21 +8853,16 @@ var ContactUsPage = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('map'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], ContactUsPage.prototype, "mapElement", void 0);
     ContactUsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-contact-us',template:/*ion-inline-start:"/Users/thanhnt/Code/PersonalProjects/acif/src/pages/contact-us/contact-us.html"*/'<ion-header>\n\n  \n\n    <ion-navbar>\n\n      <button ion-button icon-only menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n  \n\n      <ion-title>\n\n        {{\'Contact Us\'| translate }}\n\n      </ion-title>\n\n  \n\n      <!-- <ion-buttons end>\n\n        <button ion-button icon-only (click)="openSearch()">\n\n          <ion-icon name="search"></ion-icon>\n\n        </button>\n\n        <button ion-button icon-only class="cart-button" (click)="openCart()">\n\n          <ion-icon name="cart">\n\n            <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>\n\n          </ion-icon>\n\n        </button>\n\n      </ion-buttons> -->\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content class="page-contact-us">\n\n  <div #map id="map"></div>\n\n\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-row>\n\n        <ion-col col-12>\n\n          <ion-icon name="pin"></ion-icon>\n\n          <div class="card-content">{{config.address}}</div>\n\n        </ion-col>\n\n        <ion-col col-12>\n\n            <ion-icon name="mail"></ion-icon>\n\n            <div class="card-content">{{config.email}}</div>\n\n          </ion-col>\n\n          <ion-col col-12>\n\n            <ion-icon name="call"></ion-icon>\n\n            <div class="card-content">{{config.phoneNo}}</div>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <form #contactForm="ngForm" (ngSubmit)="submit()">\n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-input type="text" placeholder="{{\'Name\'|translate}}" name="name" [(ngModel)]="contact.name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-input type="email" placeholder="{{\'Email\'|translate}}" name="email" [(ngModel)]="contact.email" required></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-input type="text" placeholder="{{\'Your Messsage\'|translate}}" name="message" [(ngModel)]="contact.message" required></ion-input>\n\n          </ion-item>\n\n        </ion-list>\n\n        <button ion-button block color="secondary" type="submit" [disabled]="!contactForm.form.valid">{{\'Send\'|translate}}</button>\n\n      </form>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n<ion-footer *ngIf="config.footerShowHide==1">\n\n  <footer ></footer>\n\n</ion-footer>'/*ion-inline-end:"/Users/thanhnt/Code/PersonalProjects/acif/src/pages/contact-us/contact-us.html"*/,
+            selector: 'page-contact-us',template:/*ion-inline-start:"/Users/thanhnt/Code/PersonalProjects/acif/src/pages/contact-us/contact-us.html"*/'<ion-header>\n\n  \n\n    <ion-navbar>\n\n      <button ion-button icon-only menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n  \n\n      <ion-title>\n\n        {{\'Contact Us\'| translate }}\n\n      </ion-title>\n\n  \n\n      <!-- <ion-buttons end>\n\n        <button ion-button icon-only (click)="openSearch()">\n\n          <ion-icon name="search"></ion-icon>\n\n        </button>\n\n        <button ion-button icon-only class="cart-button" (click)="openCart()">\n\n          <ion-icon name="cart">\n\n            <ion-badge color="secondary">{{shared.cartquantity}}</ion-badge>\n\n          </ion-icon>\n\n        </button>\n\n      </ion-buttons> -->\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n<ion-content class="page-contact-us">\n\n  <div #map id="map"></div>\n\n\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-row>\n\n        <ion-col col-12>\n\n          <ion-icon name="pin"></ion-icon>\n\n          <div class="card-content">{{config.address}}</div>\n\n        </ion-col>\n\n        <ion-col col-12>\n\n            <ion-icon name="mail"></ion-icon>\n\n            <div class="card-content">{{config.email}}</div>\n\n          </ion-col>\n\n          <ion-col col-12>\n\n            <ion-icon name="call"></ion-icon>\n\n            <div class="card-content">{{config.phoneNo}}</div>\n\n          </ion-col>\n\n      </ion-row>\n\n\n\n      <form #contactForm="ngForm" (ngSubmit)="submit()">\n\n        <ion-list>\n\n          <ion-item>\n\n            <ion-input type="text" placeholder="{{\'Name\'|translate}}" name="name" [(ngModel)]="contact.name" required></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-input type="email" placeholder="{{\'Email\'|translate}}" name="email" [(ngModel)]="contact.email" required></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-input type="text" placeholder="{{\'Phone\'|translate}}" name="phone" [(ngModel)]="contact.phone" required></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <ion-input type="text" placeholder="{{\'Your Messsage\'|translate}}" name="message" [(ngModel)]="contact.message" required></ion-input>\n\n          </ion-item>\n\n        </ion-list>\n\n        <button ion-button block color="secondary" type="submit" [disabled]="!contactForm.form.valid">{{\'Send\'|translate}}</button>\n\n      </form>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n<ion-footer *ngIf="config.footerShowHide==1">\n\n  <footer ></footer>\n\n</ion-footer>'/*ion-inline-end:"/Users/thanhnt/Code/PersonalProjects/acif/src/pages/contact-us/contact-us.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_config_config__["a" /* ConfigProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_loading_loading__["a" /* LoadingProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_shared_data_shared_data__["a" /* SharedDataProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_alert_alert__["a" /* AlertProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_config_config__["a" /* ConfigProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_config_config__["a" /* ConfigProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_loading_loading__["a" /* LoadingProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_loading_loading__["a" /* LoadingProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_shared_data_shared_data__["a" /* SharedDataProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_shared_data_shared_data__["a" /* SharedDataProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__providers_alert_alert__["a" /* AlertProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_alert_alert__["a" /* AlertProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */]) === "function" && _h || Object])
     ], ContactUsPage);
     return ContactUsPage;
+    var _a, _b, _c, _d, _e, _f, _g, _h;
 }());
 
 //# sourceMappingURL=contact-us.js.map

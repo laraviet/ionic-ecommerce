@@ -24,7 +24,8 @@ export class ContactUsPage {
   contact = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    phone: ''
   };
   constructor(
     public httpClient: HttpClient,
@@ -46,10 +47,12 @@ export class ContactUsPage {
     dat = this.contact;
     this.httpClient.post(this.config.url + 'contactus', dat).subscribe((data:any) => {
       this.loading.hide();
+      console.log(data);
       if (data.success == 1) {
         this.contact.name = '';
         this.contact.email = '';
         this.contact.message = '';
+        this.contact.phone = '';
         this.shared.toast(data.message);
       }
     }, function (response) {
