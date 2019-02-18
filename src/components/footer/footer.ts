@@ -56,7 +56,7 @@ export class FooterComponent {
     else if (page == "AcifPage") { this.navCtrl.setRoot(AcifPage); }
   }
   openHomePage() {
-    if (this.config.homePage == 1) { this.navCtrl.setRoot(AboutUsPage); }
+    if (this.config.homePage == 1) { this.navCtrl.setRoot(HomePage); }
     if (this.config.homePage == 2) { this.navCtrl.setRoot(Home2Page); }
     if (this.config.homePage == 3) { this.navCtrl.setRoot(Home3Page); }
     if (this.config.homePage == 4) { this.navCtrl.setRoot(Home4Page); }

@@ -17,7 +17,8 @@ export class CurencyPipe implements PipeTransform {
 
   transform(value) {
 
-    var v = parseFloat(value).toFixed(2);
+    var v = parseFloat(value).toFixed(0).replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,");
+    console.log(v);
     if (v.toString() == 'NaN') {
 
       if (this.c.currencyPos == 'left')
@@ -27,9 +28,9 @@ export class CurencyPipe implements PipeTransform {
     }
     else {
       if (this.c.currencyPos == 'left')
-        return this.c.currency + " " + parseFloat(value).toFixed(2);
+        return this.c.currency + " " + parseFloat(value).toFixed(0).replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,");
       else
-        return parseFloat(value).toFixed(2) + " " + this.c.currency;
+        return parseFloat(value).toFixed(0).replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,") + " " + this.c.currency;
     }
   }
 }

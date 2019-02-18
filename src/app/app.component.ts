@@ -149,7 +149,7 @@ export class MyApp {
           if (value == 'firstTime') {
             // @TODO: replace default code
             // if (this.config.homePage == 1) { this.rootPage = HomePage; }
-            if (this.config.homePage == 1) { this.rootPage = AboutUsPage; }
+            if (this.config.homePage == 1) { this.rootPage = HomePage; }
             if (this.config.homePage == 2) { this.rootPage = Home2Page; }
             if (this.config.homePage == 3) { this.rootPage = Home3Page; }
             if (this.config.homePage == 4) { this.rootPage = Home4Page; }
@@ -241,7 +241,7 @@ export class MyApp {
   }
   openPage(page) {
     if (page == 'home') this.openHomePage();
-    else if (page == 'home1') this.nav.setRoot(ContactUsPage);
+    else if (page == 'home1') this.nav.setRoot(HomePage);
     else if (page == 'home2') this.nav.setRoot(Home2Page);
     else if (page == 'home3') this.nav.setRoot(Home3Page);
     else if (page == 'home4') this.nav.setRoot(Home4Page);
@@ -270,7 +270,7 @@ export class MyApp {
 
   }
   openHomePage() {
-    if (this.config.homePage == 1) { this.nav.setRoot(AboutUsPage); }
+    if (this.config.homePage == 1) { this.nav.setRoot(HomePage); }
     if (this.config.homePage == 2) { this.nav.setRoot(Home2Page); }
     if (this.config.homePage == 3) { this.nav.setRoot(Home3Page); }
     if (this.config.homePage == 4) { this.nav.setRoot(Home4Page); }
